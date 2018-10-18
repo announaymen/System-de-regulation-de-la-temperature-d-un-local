@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="projet_2.jnlp">
+  <information>
+    <title>projet_2</title>
+    <vendor>pc</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\jSerialComm-1.3.11.jar" size="252175" download="eager" />
+    <jar href="lib\jfoenix-8.0.1.jar" size="2405715" download="eager" />
+    <jar href="lib\jmf-2.1.1e.jar" size="1904171" download="eager" />
+    <jar href="lib\jssc-2.6.0-javadoc.jar" size="88170" download="eager" />
+    <jar href="lib\jssc-2.8.0.jar" size="153562" download="eager" />
+    <jar href="lib\jssc.jar" size="152418" download="eager" />
+    <jar href="lib\mail.jar" size="507849" download="eager" />
+    <jar href="projet_2.jar" size="137889" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="projet_2" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="Projet.Projet"  name="projet_2" />
+  <update check="always"/>
+</jnlp>

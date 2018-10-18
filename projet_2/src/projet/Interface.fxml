@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" cacheShape="false" centerShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="586.0" prefWidth="804.0" scaleShape="false" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projet.Projet">
+            <stylesheets>
+              <URL value="@style.css" />
+            </stylesheets>
+          <children>
+      <JFXTabPane fx:id="tabpan" layoutX="-2.0" layoutY="-1.0" prefHeight="706.0" prefWidth="1386.0">
+         <tabs>   
+          <Tab text="Acceuil ">
+            <content>
+                <AnchorPane fx:id="anchor1">
+                     <AnchorPane fx:id="anch" layoutX="26.0" layoutY="49.0">
+                        <children>
+            <Label id="lableValue" fx:id="labelValue" layoutX="44.0" layoutY="344.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="217.0" text="temperature =" textFill="#04b8ff" textOverrun="CLIP">
+                              <font>
+                                 <Font name="Arial Bold" size="21.0" />
+                              </font>
+                           </Label>
+            <Label fx:id="etat1" layoutX="46.0" layoutY="348.0" prefHeight="20.0" prefWidth="672.0" textFill="RED" underline="true">
+                              <font>
+                                 <Font name="Arial Bold Italic" size="17.0" />
+                              </font></Label>
+                           <JFXButton fx:id="l" layoutX="561.0" layoutY="405.0" onAction="#btn" prefHeight="30.0" prefWidth="88.0" ripplerFill="#eb0000" text="démarer" />
+                           <JFXCheckBox fx:id="checkSMS" layoutX="31.0" layoutY="204.0" text="envoyer SMS " textFill="#04b8ff">
+                              <font>
+                                 <Font name="Arial Bold Italic" size="14.0" />
+                              </font>
+                           </JFXCheckBox>
+                           <JFXCheckBox fx:id="checkEmail" layoutX="28.0" layoutY="166.0" text="envoyer email " textFill="#04b8ff">
+                              <font>
+                                 <Font name="Arial Bold Italic" size="14.0" />
+                              </font>
+                           </JFXCheckBox>
+                           <JFXComboBox fx:id="comboBoxPorts" focusColor="#4368d7" labelFloat="true" layoutX="15.0" layoutY="25.0" prefHeight="30.0" prefWidth="150.0" promptText="port  d'Arduino" unFocusColor="#04b8ff" />
+                           <JFXComboBox fx:id="comboBoxSMS" labelFloat="true" layoutX="17.0" layoutY="94.0" prefHeight="25.0" prefWidth="145.0" promptText="port d'SMS " unFocusColor="#04b8ff" />
+                           <Label fx:id="MEmail" layoutX="21.0" layoutY="375.0" opacity="0.0" prefHeight="20.0" prefWidth="292.0" text="votre Email : " textFill="#04b8ff">
+                              <font>
+                                 <Font name="System Bold Italic" size="14.0" />
+                              </font></Label>
+                           <Label fx:id="C" layoutX="241.0" layoutY="321.0" text="°C " textFill="#00bcf5">
+                              <font>
+                                 <Font size="32.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="etatClim" layoutX="29.0" layoutY="375.0" prefHeight="40.0" prefWidth="212.0" textFill="#04b8ff">
+                              <font>
+                                 <Font name="Arial Bold Italic" size="21.0" />
+                              </font></Label>
+                           <Label fx:id="n" layoutX="17.0" layoutY="409.0" opacity="0.0" text="Votre numéro : " textFill="#04b8ff">
+                              <font>
+                                 <Font name="System Bold Italic" size="14.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="s2" layoutX="19.0" layoutY="347.0" opacity="0.0" text="Seuil 2: " textFill="#04b8ff">
+                              <font>
+                                 <Font name="Arial Bold Italic" size="14.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="s1" layoutX="17.0" layoutY="321.0" opacity="0.0" text="Seuil 1 : " textFill="#04b8ff">
+                              <font>
+                                 <Font name="Arial Bold Italic" size="14.0" />
+                              </font>
+                           </Label>
+                           <JFXListView fx:id="em" accessibleRole="BUTTON" cache="true" layoutX="398.0" layoutY="10.0" opacity="0.0" prefHeight="260.0" prefWidth="295.0" />
+                           <Label fx:id="sec" layoutX="31.0" layoutY="243.0" prefHeight="17.0" prefWidth="456.0" textFill="#04b8ff">
+                              <font>
+                                 <Font name="Arial Bold Italic" size="14.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </AnchorPane>
+                     <JFXToggleButton fx:id="toggle" layoutX="611.0" selected="true" text="programe" textFill="#04b8ff" AnchorPane.bottomAnchor="621.0" AnchorPane.leftAnchor="611.0" AnchorPane.rightAnchor="632.0" AnchorPane.topAnchor="0.0">
+                        <font>
+                           <Font name="System Bold Italic" size="15.0" />
+                        </font>
+                        <padding>
+                           <Insets right="20.0" />
+                        </padding>
+                     </JFXToggleButton>
+                </AnchorPane>
+            </content>
+          </Tab>
+           <Tab text="configuration ">
+            <content>
+              <AnchorPane fx:id="anchor2" prefWidth="1413.0">
+                     <children>
+                              <Label layoutX="22.0" layoutY="145.0" text="Email" textFill="#0f9d58">
+                           <font>
+                              <Font name="Arial Bold Italic" size="14.0" />
+                           </font></Label>
+                        <JFXTextField fx:id="inp1" focusColor="#669bff" labelFloat="true" layoutX="123.0" layoutY="72.0" prefHeight="26.0" prefWidth="101.0" promptText="Seuil 1" unFocusColor="#04b8ff">
+                           <font>
+                              <Font name="Arial Bold Italic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="inp2" focusColor="WHITE" labelFloat="true" layoutX="503.0" layoutY="78.0" prefHeight="26.0" prefWidth="90.0" promptText="Seuil 2" unFocusColor="#04b8ff">
+                           <font>
+                              <Font name="Arial Bold Italic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="c1" layoutX="128.0" layoutY="140.0" prefHeight="26.0" prefWidth="228.0" promptText="entrer votre email" unFocusColor="#05bcff">
+                           <font>
+                              <Font name="Arial Bold Italic" size="14.0" />
+                           </font></JFXTextField>
+                        <JFXPasswordField fx:id="c2" layoutX="505.0" layoutY="137.0" prefHeight="32.0" prefWidth="232.0" promptText="entrer votre mot de pass" unFocusColor="#05bcff">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></JFXPasswordField>
+                        <JFXTextField fx:id="inp4" focusColor="#c236af" labelFloat="true" layoutX="123.0" layoutY="289.0" prefHeight="26.0" prefWidth="235.0" promptText="téléphone" unFocusColor="#04b8ff">
+                           <font>
+                              <Font name="Arial Bold Italic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="inp3" focusColor="#c236af" labelFloat="true" layoutX="503.0" layoutY="287.0" prefHeight="26.0" prefWidth="237.0" promptText="entrer l'email de destinateur" unFocusColor="#04b8ff">
+                           <font>
+                              <Font name="Arial Bold Italic" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="msg" focusColor="#c236af" labelFloat="true" layoutX="116.0" layoutY="369.0" prefHeight="26.0" prefWidth="232.0" promptText="entrer le titre de message" unFocusColor="#04b8ff">
+                           <font>
+                              <Font name="Arial Bold Italic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="objet" focusColor="#c236af" labelFloat="true" layoutX="500.0" layoutY="369.0" prefHeight="26.0" prefWidth="237.0" promptText="entrer le contenu" unFocusColor="#04b8ff">
+                           <font>
+                              <Font name="Arial Bold Italic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                              <Label layoutX="392.0" layoutY="145.0" text="mot de pass" textFill="#0f9d58">
+                           <font>
+                              <Font name="Arial Bold Italic" size="14.0" />
+                           </font></Label>
+                              <Label fx:id="etat2" layoutX="328.0" layoutY="476.0" prefHeight="17.0" prefWidth="209.0" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <JFXButton fx:id="ll" layoutX="589.0" layoutY="471.0" onAction="#save" prefHeight="30.0" prefWidth="106.0" ripplerFill="#eb00e0" text="enregistrer " />
+                        <JFXTextField fx:id="host" layoutX="128.0" layoutY="207.0" prefHeight="30.0" prefWidth="231.0" promptText="entrer le serveur  smtp" unFocusColor="#04b8ff">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutX="32.0" layoutY="217.0" text="Serveur" textFill="#0f9d58">
+                           <font>
+                              <Font name="Arial Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="292.0" text="téléphone" textFill="#0f9d58">
+                           <font>
+                              <Font name="Arial Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="395.0" layoutY="292.0" text="email" textFill="#0f9d58">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="21.0" layoutY="380.0" text="message" textFill="#0f9d58">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="407.0" layoutY="379.0" text="objet" textFill="#0f9d58">
+                           <font>
+                              <Font name="Arial Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="serverPort" layoutX="505.0" layoutY="225.0" prefHeight="25.0" prefWidth="104.0" text="587" unFocusColor="#04b8ff">
+                           <font>
+                              <Font name="Arial Bold Italic" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutX="411.0" layoutY="230.0" text="Port" textFill="#0f9d58">
+                           <font>
+                              <Font name="Arial Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tmp" layoutX="257.0" layoutY="444.0" text="1" unFocusColor="#05bcff" />
+                        <Label layoutX="36.0" layoutY="448.0" text="temp entre les emails (minutes)" textFill="#0f9d58">
+                           <font>
+                              <Font name="Arial Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+         </tabs>
+      </JFXTabPane>
+         </children>
+</AnchorPane>
