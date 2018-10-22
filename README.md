@@ -6,8 +6,11 @@
  # partie logiciel ( programme java/javaFx) 
    pour configuré le system #
      -le seuil d'activtion/desactivation de climatiseur .
+      ****
      -le seuil d'alert .
+      ****
      -le numero de telephone ou l'email pour recevoir les alertes .
+      ****
      -et quelque autres configuration .
      
  
